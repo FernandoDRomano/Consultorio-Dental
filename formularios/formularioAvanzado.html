@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Consultorio Dental</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../css/all.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 p-5">
+          <form action="" class="bg-light p-3">
+            <h2 class="text-center mb-4">Formulario de Pedido</h2>
+
+            <!--Sección Información Personal-->
+            <div class="form-row mb-4">
+              <div class="col-12 text-info mb-4">
+                <h4>
+                  <span class="fa-stack">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+                  </span>
+                  Información Personal
+                </h4>
+              </div>
+
+              <div class="form-group col-12 col-sm-6">
+                <label for="nombre">Nombre:</label>
+                <input
+                  type="text"
+                  name="nombre"
+                  id="nombre"
+                  placeholder="Ingrese su Nombre"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group col-12 col-sm-6">
+                <label for="apellidos">Apellidos:</label>
+                <input
+                  type="text"
+                  name="apellidos"
+                  id="apellidos"
+                  placeholder="Ingrese sus apellidos"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group col-12 col-sm-6">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Ingrese su Email"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group col-12 col-sm-6">
+                <label for="telefono">Teléfono:</label>
+                <input
+                  type="text"
+                  name="telefono"
+                  id="telefono"
+                  placeholder="Ingrese su Teléfono"
+                  class="form-control"
+                />
+              </div>
+            </div>
+
+            <!--Sección Dirección de Envio-->
+            <div class="form-row mb-4">
+              <div class="col-12 text-info mb-4">
+                <h4>
+                  <span class="fa-stack">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-map-marked-alt fa-stack-1x fa-inverse"></i>
+                  </span>
+                  Dirección de Envio
+                </h4>
+              </div>
+
+              <div class="form-group col-12">
+                <label for="dirección">Dirección:</label>
+                <input
+                  type="text"
+                  name="direccion"
+                  id="direccion"
+                  placeholder="Ingrese su Dirección"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group col-6 col-md-4">
+                <label for="provincia">Provincia:</label>
+                <input
+                  type="text"
+                  name="provincia"
+                  id="provincia"
+                  placeholder="Ingrese su Provincia"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group col-6 col-md-4">
+                <label for="ciudad">Ciudad:</label>
+                <input
+                  type="text"
+                  name="ciudad"
+                  id="ciudad"
+                  placeholder="Ingrese su Ciudad"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group col-12 col-md-4">
+                <label for="cp">Código Postal:</label>
+                <input
+                  type="text"
+                  name="cp"
+                  id="cp"
+                  placeholder="Ingrese su Código Postal"
+                  class="form-control"
+                />
+              </div>
+            </div>
+
+            <!--Sección Fecha de Envio-->
+            <div class="form-row mb-2">
+              <div class="col-12 text-info mb-4">
+                <h4>
+                  <span class="fa-stack">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-calendar fa-stack-1x fa-inverse"></i>
+                  </span>
+                  Fecha de Envio
+                </h4>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="form-row">
+                  <div class="form-group col-12 col-sm-6 col-md-12">
+                    <label for="fechaEnvio">Fecha de Envío:</label>
+                    <input
+                      type="text"
+                      name="fechaEnvio"
+                      id="fechaEnvio"
+                      class="form-control"
+                      placeholder="Por Ej: 12/03/2020"
+                    />
+                  </div>
+                  <div class="form-group col-12 col-sm-6 col-md-12">
+                    <label for="horaEnvio">Hora de Envío:</label>
+                    <input
+                      type="text"
+                      name="horaEnvio"
+                      id="horaEnvio"
+                      class="form-control"
+                      placeholder="Por Ej: 12:30PM"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-12 col-md-6">
+                <label for="comentarios">Comentariós:</label>
+                <textarea
+                  name="comentarios"
+                  id="comentarios"
+                  rows="5"
+                  placeholder="Ingrese sus comentarios del pedido"
+                  class="form-control"
+                ></textarea>
+              </div>
+            </div>
+
+            <!--Sección de los Botones-->
+            <div class="form-row form-group justify-content-center">
+              <div class="col-12 col-md-3">
+                <button
+                  type="submit"
+                  class="btn btn-block btn-primary mb-2 mb-md-0"
+                >
+                  <i class="fas fa-paper-plane mr-1"></i>
+                  Enviar
+                </button>
+              </div>
+              <div class="col-12 col-md-3">
+                <button type="reset" class="btn btn-secondary btn-block">
+                  <i class="fas fa-times mr-1"></i>
+                  Limpiar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
