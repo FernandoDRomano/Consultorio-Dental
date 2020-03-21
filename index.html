@@ -14,16 +14,97 @@
     <link rel="stylesheet" href="css/all.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Hoja de Estilo Propia-->
+    <link rel="stylesheet" href="css/estilos.css">
 
   </head>
   <body>
-    <h1>Hola Mundo</h1>
+    
+    <!--Sección: Barra de Contacto-->
+    <section class="bg-primary text-white py-3" id="barraDeContacto">
+      <div class="container">
+        <div class="row text-center justify-content-sm-between align-items-sm-center">
+          <div class="col-12 col-sm-auto">
+            <span>
+              <i class="fas fa-map-marker-alt mr-1"></i>
+              1936 Gral. Lamadrid, San Miguel de Tucumán.
+            </span>
+          </div>
+          <div class="col-12 col-sm-auto">
+            <ul class="redesSociales list-unstyled d-inline-flex mb-0">
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!--Sección: Detalles Encabezado-->
+    <section id="detalleEncabezado" class="d-none d-md-block py-3">
+      <div class="container">
+        <div class="row align-items-md-center justify-content-md-between">
+          <div class="col-md-auto">
+            <a href="#" class="logo">
+              <img src="images/logo.svg" alt="Logo del Sitio" width="200px">
+            </a>
+          </div>
+          <div class="col-md-auto ml-md-auto">
+              <i class="fas fa-phone fa-2x fa-flip-horizontal align-middle text-primary"></i>
+              <span class="h5 font-weight-bold">+5493816974118</span>
+          </div>
+          <div class="col-md-auto">
+            <i class="fas fa-envelope fa-2x align-middle text-primary"></i>
+            <span class="h5 font-weight-bold">consultorio@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Sección: Menu de Navegación-->
+    <nav id="menuNavegacion" class="navbar navbar-dark bg-secondary navbar-expand-md">
+      <div class="container">
+
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menuPrincipal" aria-expanded="false" aria-label="Menu Principal">
+          <span class="botonMenu"></span>
+        </button>
+
+        <a href="#" class="btn btn-primary order-md-1">
+          Reservar una cita
+        </a>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav mt-3 mt-md-0">
+            <li class="nav-item mb-1 mb-md-0 mr-md-1">
+              <a href="#" class="nav-link active">Inicio</a>
+            </li>
+            <li class="nav-item mb-1 mb-md-0 mr-md-1">
+              <a href="#" class="nav-link">Nosotros</a>
+            </li>
+            <li class="nav-item mb-1 mb-md-0 mr-md-1">
+              <a href="#" class="nav-link">Premios</a>
+            </li>
+            <li class="nav-item mb-1 mb-md-0 mr-md-1">
+              <a href="#" class="nav-link">Nuestra APP</a>
+            </li>
+            <li class="nav-item mb-1 mb-md-0 mr-md-0">
+              <a href="#" class="nav-link">Contacto</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+    
     <!-- jQuery -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <!-- Popper js -->
     <script src="js/popper.min.js"></script>
     <!-- Bootstrap Js -->
     <script src="js/bootstrap.min.js"></script>
+    <!---Script Propios -->
+    <script src="js/scripts.js"></script>
   </body>
 </html>

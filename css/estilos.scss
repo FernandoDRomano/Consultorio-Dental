@@ -1,0 +1,224 @@
+/*
+    PATRONES DE COLORES
+*/
+
+$principal: #00ad75;
+$secundario: #35363c;
+$texto: #696969;
+
+/*
+    1. TIPOGRAFIA DEL SITIO
+*/
+
+html{
+    font-size: 13px;
+}
+
+body{
+    font-family: 'Arial';
+    color: $texto;
+}
+
+/*
+    2. ESTILOS GENERALES DE BOTONES
+*/
+
+.btn{
+    padding: .7rem 2rem;
+    border-radius: 2rem;
+    font-weight: bold;
+}
+
+/*
+    3. ESTILOS COLOR PRINCIPAL
+*/
+.bg-primary{
+    background-color: $principal!important;
+}
+
+.text-primary{
+    color: $principal!important;
+}
+
+.btn-primary{
+    color: white;
+    background-color: $principal;
+    border-color: $principal;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all .5s ease;
+}
+
+.btn-primary:hover{
+    color: $texto;
+    background-color: white;
+    border-color: $principal;
+}
+
+.btn-primary:active{
+    color: $texto!important;
+    background-color: lighten($principal, 5%)!important;
+    border-color: lighten($principal, 10%)!important;
+}
+
+.btn-primary:focus {
+    color: $texto;
+    background-color: $principal;
+    border-color: $principal;
+    box-shadow: 0 0 0 0.2rem rgba($principal,.5)!important;
+}
+
+//Insertamos la flecha del boton principal
+.btn-primary:after{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f138";
+    position: relative;
+    left: .6rem;
+    top: .1rem;
+    //Solamente animo el movimiento no el cambio de color, por eso le pongo como left al primer parametro
+    transition: left .3s ease;
+}
+
+//Para que se mueve el icono en el estado hover, active y focus
+.btn-primary:hover:after,
+.btn-primary:focus:after,
+.btn-primary:active:after{
+    left: .25rem;
+}
+
+//Efecto de caja de fondo blanco cubriendo el boton principal
+.btn-primary:before{
+    content: "";
+    z-index: -1;
+    width: 0px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: skewX(45deg);
+    transition: all .35s ease;
+}
+
+
+.btn-primary:hover::before,
+.btn-primary:focus::before,
+.btn-primary:active::before{
+    left: -20%;
+    width: 130%;
+}
+
+
+/*
+    4. ESTILOS COLOR SECUNDARIO
+*/
+.bg-secondary{
+    background-color: $secundario!important;
+}
+
+.text-secondary{
+    color: $secundario!important;
+}
+
+/*
+    5. ESTILOS PARA ".redesSociales"
+*/
+
+.redesSociales li a i{
+    color: #fff;
+    font-size: 1.5rem;
+    padding: .6rem 1rem;
+    opacity: .8;
+    //Para que todas las transformaciones y efectos que se apliquen se hagan en un lapzo de .3 segundos
+    transition: all .3s ease-in-out;
+}
+
+.redesSociales li a i:hover {
+    opacity: 1;
+    //Para lograr que se agrande y gire 360grados
+    transform: scale(1.35) rotate(360deg);
+}
+
+/*
+    6. ESTILOS PARA EL MENU DE NAVEGACIÓN
+*/
+
+//Quitamos los estilos al boton por defecto
+#menuNavegacion .navbar-toggler{
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    outline: 0;
+} 
+
+//Para agregar el icono de hamburguesa del menu, mediante font awesome
+#menuNavegacion .botonMenu::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f0c9";
+    font-size: 2rem;
+    color: white;
+}
+
+#menuNavegacion .iconoCerrar::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f00d";
+    font-size: 2rem;
+    color: white;
+}
+
+//Estilos a los enlaces de navegación
+.navbar-dark .navbar-nav .nav-link{
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    transition: all .3s ease;
+    border-radius: .5rem;
+}
+
+//Agregando icono de flecha a los enlaces
+.navbar-dark .navbar-nav .nav-link::after{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f105";
+    transition: all .3s ease;
+}
+
+//Estilos estado hover del enlace
+.navbar-dark .navbar-nav .nav-link:hover{
+    color: white;
+    background-color: lighten($secundario, 10%);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover:after{
+    transform: rotateZ(180deg);
+}
+
+//Estilos para el enlace activo
+.navbar-dark .navbar-nav .nav-link.active{
+    background-color: $principal;
+    color: white;
+}
+
+/*
+    X. MEDIAS QUERIES
+*/
+
+//Se aplicara cuando la pantalla tenga como minimo 768px
+@media(min-width:768px){
+    .navbar-dark .navbar-nav .nav-link{
+        padding: .7rem 1.2rem;
+        border-radius: 2rem;
+    }
+
+    //Quito el icono de flecha de los enlaces
+    .navbar-dark .navbar-nav .nav-link::after{
+        content: "";
+    }
+}
