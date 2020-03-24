@@ -207,6 +207,140 @@ body{
 }
 
 /*
+    7. ESTILOS PARA #animacion
+*/
+
+//Configuracion basica de cada imagen del slide
+.swiper-slide{
+    height: 35rem;
+    text-align: center;
+    background-size: cover;
+    background-position: center center;
+    color: white;
+}
+
+//Para oscurer la imagen del background
+.swiper-slide::before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    background-color: black;
+    opacity: .5;
+}
+
+//Configuracion del boton de imagen previa
+.swiper-button-prev{
+    background-color:rgba(0,0,0,0.25);
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    transition: all .3s ease;
+}
+
+.swiper-button-prev:after{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f060";
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.swiper-button-prev:hover{
+    background-color:rgba(0,0,0,0.5);
+}
+
+.swiper-button-prev:hover:after{
+    color:$principal;
+}
+
+//Configuracion del boton de imagen siguiente
+.swiper-button-next{
+    background-color:rgba(0,0,0,0.25);
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    transition: all .3s ease;
+}
+
+.swiper-button-next:after{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f061";
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.swiper-button-next:hover{
+    background-color:rgba(0,0,0,0.5);
+}
+
+.swiper-button-next:hover:after{
+    color: $principal;
+}
+
+//Configuracion de la paginacion inferior
+.swiper-pagination-bullet{
+    width: 1rem;
+    height: 1rem;
+    margin: 0 .4rem!important;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: $principal;
+}
+
+/*
+    8. ESTILOS PARA #bienvenido
+*/
+
+.contenedorVideo a{
+    background-color: rgba(255,255,255, .7);
+    width: 7rem;
+    height: 7rem;
+    display: block;
+    border-radius: 50%;
+    color: $principal;
+    font-size: 2rem;
+    text-decoration: none;
+    //Para centrar el icono dentro del boton
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //Para centrar el icono en la imagen
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); //translate toma en cuenta el tamaño del elemento
+
+    //Para que el border no tome el color verde de fondo en el estado hover
+    background-clip: padding-box;
+    border: 0px solid transparent;
+    transition: all .3s ease;
+}
+
+.contenedorVideo a:hover{
+    color: white;
+    background-color: $principal;
+    border: 10px solid rgba(255,255,255, .35);
+}
+
+.contenedorVideo{
+    //Para que al escalar la imagen sobre el estado hover, no sobresalga del contenedor
+    overflow: hidden;
+}
+
+.contenedorVideo img{
+    transition: all .3s ease;
+}
+
+.contenedorVideo:hover img{
+    transform: scale(1.2);
+}
+
+/*
     X. MEDIAS QUERIES
 */
 
@@ -220,5 +354,25 @@ body{
     //Quito el icono de flecha de los enlaces
     .navbar-dark .navbar-nav .nav-link::after{
         content: "";
+    }
+}
+
+//Se aplicara cuando la pantalla tenga como minimo 990px
+@media(min-width:990px){
+    //Incremento el tamaño de la fuente en toda la pagina
+    html{
+        font-size: 16px;
+    }
+    //Incremento el tamaño del slide
+    .swiper-slide{
+        height: 38rem;
+    }
+}
+
+//Se aplicara cuando la pantalla tenga como minimo 1200px
+@media(min-width:1200px){
+    //Incremento el tamaño del slide
+    .swiper-slide{
+        height: 44rem;
     }
 }

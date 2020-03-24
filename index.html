@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>Consultori Dental</title>
+    <title>Consultorio Dental</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <!--Fav Icon-->
+    <!-- Fav Icon -->
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/all.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--Hoja de Estilo Propia-->
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <!-- VenoBox -->
+    <link rel="stylesheet" href="css/venobox.min.css">
+    <!-- Hoja de Estilo Propia -->
     <link rel="stylesheet" href="css/estilos.css">
 
   </head>
@@ -97,6 +101,79 @@
 
       </div>
     </nav>
+
+    <!-- Sección: Carousel de Imagenes -->
+    <section id="animacion" class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide d-flex justify-content-center align-items-center" style="background-image:url('images/fondo-slide-1.jpg');">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-9 col-sm-11 col-md-12">
+                    <h3 class="display-4 font-weight-bold">Creamos sonrisas vibrantes que hablará por tí.</h3>
+                    <a href="#" class="btn btn-primary">Reservar una cita</a>
+                  </div>
+                </div>
+              </div>  
+
+            </div>
+
+            <div class="swiper-slide d-flex justify-content-center align-items-center" style="background-image: url('images/fondo-slide-2.jpg');">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-9 col-sm-11 col-md-12">
+                    <h3 class="display-4 font-weight-bold">Reservar una cita es muy facil</h3>
+                    <a href="#" class="btn btn-primary">Reservar una cita</a>
+                  </div>
+                </div>
+              </div> 
+            </div>
+
+            <div class="swiper-slide d-flex justify-content-center align-items-center" style="background-image: url('images/fondo-slide-3.jpg');">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-9 col-sm-11 col-md-12">
+                    <h3 class="display-4 font-weight-bold">Disponible las 24hs y los 7 días de la semana</h3>
+                    <a href="#" class="btn btn-primary">Reservar una cita</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </section>
+
+    <!--Sección: Bienvenido-->
+    <section id="bienvenido" class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+
+          <div class="col-12 col-lg-6 text-center">
+            <div class="contenedorVideo d-inline-block position-relative">
+              <img src="images/fondo-video.jpg" alt="Imagen Video" class="img-fluid">
+              <a href="http://www.youtu.be/xR2_TjhE3GE" class="venobox" data-vbtype="video" data-autoplay="true"><i class="fas fa-play"></i></a>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 pt-4 pt-lg-0 text-center text-lg-left">
+            <h2 class="text-uppercase display-4 font-weight-bold text-secondary">Bienvenidos a tu <span class="text-primary">Clinica Sonrisas</span></h2>
+            <h6 class="text-uppercase text-black-50">Somos parte de Ti</h6>
+            <p class="text-black-50">Proporcionamos atención médica de la mas alta calidad, tratamiento individualizado por los principales expertos del país y en el menor tiempo posible. Te invitamos a conocernos un poco más.</p>
+            <a href="#" class="btn btn-primary mt-3">Reservar una cita</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
     
     <!-- jQuery -->
     <script src="js/jquery-3.4.1.min.js"></script>
@@ -104,7 +181,11 @@
     <script src="js/popper.min.js"></script>
     <!-- Bootstrap Js -->
     <script src="js/bootstrap.min.js"></script>
-    <!---Script Propios -->
+    <!-- Swiper Js -->
+    <script src="js/swiper.min.js"></script>
+    <!-- VenoBox -->
+    <script src="js/venobox.min.js"></script>
+    <!-- Script Propios -->
     <script src="js/scripts.js"></script>
   </body>
 </html>
