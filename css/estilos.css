@@ -291,6 +291,48 @@ body {
           transform: scale(1.2); }
 
 /*
+    9. ESTILOS PARA #teAyudamos
+*/
+#teAyudamos {
+  position: relative;
+  -webkit-transform: skew(0, 6deg);
+          transform: skew(0, 6deg); }
+
+#teAyudamos::before {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+
+#teAyudamos .container {
+  -webkit-transform: skew(0, -6deg);
+          transform: skew(0, -6deg); }
+
+/*
+    10. ESTILOS PARA #premios
+*/
+.contadorLinea {
+  position: absolute;
+  height: .35rem;
+  width: 4rem;
+  background-color: #00ad75;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease; }
+
+#premios .col-6:hover .contadorLinea {
+  bottom: .7rem;
+  -webkit-transform: translateX(-50%) rotate(180deg);
+          transform: translateX(-50%) rotate(180deg);
+  background-color: #35363c; }
+
+/*
     X. MEDIAS QUERIES
 */
 @media (min-width: 768px) {
@@ -299,7 +341,15 @@ body {
     border-radius: 2rem; }
 
   .navbar-dark .navbar-nav .nav-link::after {
-    content: ""; } }
+    content: ""; }
+
+  #teAyudamos {
+    -webkit-transform: skewY(3deg);
+            transform: skewY(3deg); }
+
+  #teAyudamos .container {
+    -webkit-transform: skewY(-3deg);
+            transform: skewY(-3deg); } }
 @media (min-width: 990px) {
   html {
     font-size: 16px; }

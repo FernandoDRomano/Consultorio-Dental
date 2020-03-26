@@ -73,3 +73,11 @@ $(document).ready(function(){
         share: []
     }); 
 });
+
+/*
+    PARA CONFIGURAR counterUp 
+*/
+$('.counter').counterUp({
+    delay: 10,
+    time: 1200
+});

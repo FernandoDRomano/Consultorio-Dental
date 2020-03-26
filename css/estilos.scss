@@ -341,6 +341,50 @@ body{
 }
 
 /*
+    9. ESTILOS PARA #teAyudamos
+*/
+
+#teAyudamos{
+    position: relative;
+    transform: skew(0, 6deg);
+}
+
+#teAyudamos::before{
+    content: '';
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#teAyudamos .container{
+    transform: skew(0, -6deg);
+}
+
+/*
+    10. ESTILOS PARA #premios
+*/
+
+.contadorLinea{
+    position: absolute;
+    height: .35rem;
+    width: 4rem;
+    background-color: $principal;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .5s ease;
+}
+
+#premios .col-6:hover .contadorLinea{
+    bottom: .7rem;
+    transform: translateX(-50%) rotate(180deg);
+    background-color: $secundario;
+}
+
+/*
     X. MEDIAS QUERIES
 */
 
@@ -355,6 +399,16 @@ body{
     .navbar-dark .navbar-nav .nav-link::after{
         content: "";
     }
+
+    //Reduzco la inclinacion de la imagen de parallax de la seccion #teAyudamos
+    #teAyudamos{
+        transform: skewY(3deg);
+    }
+    
+    #teAyudamos .container{
+        transform: skewY(-3deg);
+    }
+    
 }
 
 //Se aplicara cuando la pantalla tenga como minimo 990px
