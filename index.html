@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="css/venobox.min.css">
     <!-- Jarallax -->
     <link rel="stylesheet" href="css/jarallax.css">
+    <!-- Pickadate.js -->
+    <link rel="stylesheet" href="js/pickadate.js/themes/default.css">
+    <link rel="stylesheet" href="js/pickadate.js/themes/default.date.css">
+    <link rel="stylesheet" href="js/pickadate.js/themes/default.time.css">
     <!-- Hoja de Estilo Propia -->
     <link rel="stylesheet" href="css/estilos.css">
 
@@ -27,7 +31,7 @@
   <body>
     
     <!--Sección: Barra de Contacto-->
-    <section class="bg-primary text-white py-3" id="barraDeContacto">
+    <section class="bg-primary text-white py-3 py-lg-1" id="barraDeContacto">
       <div class="container">
         <div class="row text-center justify-content-sm-between align-items-sm-center">
           <div class="col-12 col-sm-auto">
@@ -70,7 +74,7 @@
     </section>
 
     <!--Sección: Menu de Navegación-->
-    <nav id="menuNavegacion" class="navbar navbar-dark bg-secondary navbar-expand-md">
+    <nav id="menuNavegacion" class="navbar navbar-dark bg-secondary navbar-expand-md ">
       <div class="container">
 
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menuPrincipal" aria-expanded="false" aria-label="Menu Principal">
@@ -84,19 +88,19 @@
         <div class="collapse navbar-collapse" id="menuPrincipal">
           <ul class="navbar-nav mt-3 mt-md-0">
             <li class="nav-item mb-1 mb-md-0 mr-md-1">
-              <a href="#" class="nav-link active">Inicio</a>
+              <a href="#barraDeContacto" class="nav-link active">Inicio</a>
             </li>
             <li class="nav-item mb-1 mb-md-0 mr-md-1">
-              <a href="#" class="nav-link">Nosotros</a>
+              <a href="#bienvenido" class="nav-link">Nosotros</a>
             </li>
             <li class="nav-item mb-1 mb-md-0 mr-md-1">
-              <a href="#" class="nav-link">Premios</a>
+              <a href="#premios" class="nav-link">Premios</a>
             </li>
             <li class="nav-item mb-1 mb-md-0 mr-md-1">
-              <a href="#" class="nav-link">Nuestra APP</a>
+              <a href="#nuestraApp" class="nav-link">Nuestra APP</a>
             </li>
             <li class="nav-item mb-1 mb-md-0 mr-md-0">
-              <a href="#" class="nav-link">Contacto</a>
+              <a href="#contactanos" class="nav-link">Contacto</a>
             </li>
           </ul>
         </div>
@@ -183,7 +187,7 @@
       <picture class="jarallax-img">
         <source media="(min-width: 1200px)" srcset="images/fondo-te-ayudamos-xl.jpg">
         <source media="(min-width: 768px)" srcset="images/fondo-te-ayudamos-md.jpg">
-        <img src="images/fondo-te-ayudamos.jpg" alt="Fondo Imagen" class="w-100">
+        <img srcset="images/fondo-te-ayudamos.jpg" alt="Fondo Imagen" class="w-100">
       </picture>
       <div class="container">
         <div class="row py-5">
@@ -240,24 +244,194 @@
       </div>
     </section>
     
+    <!-- Sección: nuestraApp -->
+    <section id="nuestraApp" class="py-5 bg-secondary jarallax" data-jarallax data-speed="0.6">
+      <!-- Imagenes a cargar dependiendo el contexto de pantalla -->
+      <picture class="jarallax-img">
+        <source media="(min-width: 1200px)" srcset="images/fondo-descargar-app-xl.jpg">
+        <source media="(min-width: 968px)" srcset="images/fondo-descargar-app-md.jpg">
+        <img srcset="images/fondo-descargar-app.jpg" alt="Fondo Imagen" class="w-100">
+      </picture>
+      <div class="container">
+        <div class="row py-5">
+          <div class="col-12 col-md-6 offset-md-6 text-center text-md-left">
+            <h2 class="h1 text-uppercase font-weight-bold text-white">Descagar Nuestra App y accede a descuentos Exclusivos!</h2>
+            <h6 class="text-uppercase text-white-50">Somos partes de Tí</h6>
+            <p class="text-white">Hemos creado una aplicación exclusiva para nuestros clientes. Desde donde podrás acceder a sorteos y descuentos especiales</p>
+            <a href="#" class="btn btn-primary mt-3">Conocenos más</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Contactanos -->
+    <section id="contactanos" class="">
+      <header class="py-5 bg-primary text-uppercase text-center">
+        <h2 class="text-white display-4 font-weight-bold">Contáctanos</h2>
+        <h6 class="text-uppercase text-center text-white-50">Estamos listos para atenderte</h6>
+        <div class="detalleRectangulo"></div>
+      </header>
+
+      <div class="container">
+        <div class="row pt-5">
+          <div class="col-12 col-lg-6">
+            <h2 class="text-center font-weight-bold mb-2">Detalles de Contacto:</h2>
+            <ul class="list-unstyled">
+              <li class="d-flex border-bottom py-4">
+                <i class="fas fa-globe fa-3x fa-fw text-primary"></i>
+                <div class="ml-4">
+                  <h5 class="font-weight-bold my-0">Dirección:</h5>
+                  <p class="my-0">1936 Gral. Lamadrid, San Miguel de Tucumán.</p>
+                </div>
+              </li>
+              <li class="d-flex border-bottom py-4">
+                <i class="fas fa-mobile-alt fa-3x fa-fw text-warning"></i>
+                <div class="ml-4">
+                  <h5 class="font-weight-bold my-0">Teléfono:</h5>
+                  <p class="my-0">+5493816974118</p>
+                </div>
+              </li>
+              <li class="d-flex border-bottom py-4">
+                <i class="fas fa-envelope-open fa-3x fa-fw text-danger"></i>
+                <div class="ml-4">
+                  <h5 class="font-weight-bold my-0">Email:</h5>
+                  <p class="my-0">consultorio@gmail.com</p>
+                </div>
+              </li>
+              <li class="d-flex border-bottom py-4">
+                <i class="fab fa-skype fa-3x fa-fw text-info"></i>
+                <div class="ml-4">
+                  <h5 class="font-weight-bold my-0">Skype:</h5>
+                  <p class="my-0">SonrisasOnline</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-6 pt-4 pt-lg-0">
+            <h2 class="text-center font-weight-bold mb-2">Separa una Cita:</h2>
+            <form action="#" id="formContacto" class="py-4">
+
+              <div class="form-group form-row">
+                <label for="nombre" class="col-form-label col-12 col-md-2">Nombre:</label>
+                <div class="col-12 col-md-10">
+                  <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-group form-row">
+                <label for="email" class="col-form-label col-12 col-md-2">Email:</label>
+                <div class="col-12 col-md-10">
+                  <input type="email" name="email" id="email" placeholder="Ingrese su Email" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-group form-row">
+                <label for="celular" class="col-form-label col-12 col-md-2">Celular:</label>
+                <div class="col-12 col-md-10">
+                  <input type="number" name="celular" id="celular" placeholder="Ingrese su Celular" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-group form-row">
+                <label for="mensaje" class="col-form-label col-12 col-md-2">Mensaje:</label>
+                <div class="col-12 col-md-10">
+                  <textarea name="mensaje" id="mensaje" rows="4" placeholder="Ingrese su Mensaje" class="form-control"></textarea>
+                </div>
+              </div>
+
+              <div class="form-group form-row">
+                <label for="fecha" class="col-form-label col-12 col-md-2">Fecha:</label>
+                <div class="col-12 col-md-10">
+                  <div class="input-group">
+                    <input type="date" id="fecha" name="fecha" class="form-control datepicker">
+                    <label class="input-group-append input-group-campo" for="fecha">
+                      <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group form-row">
+                <label for="hora" class="col-form-label col-12 col-md-2">Hora:</label>
+                <div class="col-12 col-md-10">
+                  <div class="input-group">
+                    <input type="text" id="hora" name="hora" class="form-control timepicker">
+                    <label class="input-group-append input-group-campo" for="hora">
+                      <span class="input-group-text"><i class="far fa-clock"></i></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-12 col-md-10 offset-md-2">
+                  <button type="submit" class="btn btn-primary btn-block btn-lg">Enviar</button>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- Pie de Pagina -->
+    <footer id="pieDePagina" class="bg-secondary">
+      <div class="container-fluid">
+        <div class="row align-items-md-center px-5">
+          <div class="columnaInclinada col-12 col-md-6 col-lg-5 py-2">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="text-white font-weight-bold h1">Soporte</h2>
+              </div>
+              <div class="col-auto text-black-50">
+                <i class="fas fa-briefcase-medical fa-4x pr-2"></i>
+              </div>
+              <div class="col-auto text-black-50">
+                <h3 class="">+5493816974118</h3>
+                <p class="mb-0">Servicio de ayuda esta disponible 24h/7</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-7 py-2 text-center text-md-right small">
+            <ul class="list-unstyled text-uppercase d-inline-flex borde-bottom pb-2">
+              <li class="nav-link"><a href="#" class="nav-item text-white text-decoration-none">Inicio</a></li>
+              <li class="nav-link"><a href="#" class="nav-item text-white text-decoration-none">Nosotros</a></li>
+              <li class="nav-link"><a href="#" class="nav-item text-white text-decoration-none">Políticas de Privacidad</a></li>
+            </ul>
+            <p class="text-white mb-0">©2020. Todos los derechos reservados</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <!-- jQuery -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <!-- Popper js -->
     <script src="js/popper.min.js"></script>
     <!-- Bootstrap Js -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- Swiper Js -->
+    <!-- Swiper Js | Para realizar el Slide de imagenes-->
     <script src="js/swiper.min.js"></script>
-    <!-- VenoBox -->
+    <!-- VenoBox | Para la ventana modal del video-->
     <script src="js/venobox.min.js"></script>
     <!-- Jarallax -->
     <script src="js/jarallax.min.js"></script>
-    <!-- Picture -->
+    <!-- Picture | Compatibilidad del parallax con internet explorer-->
     <script src="js/picturefill.min.js"></script>
-    <!-- WayPoints -->
+    <!-- WayPoints | Necesario para usar Counter Up-->
     <script src="js/jquery.waypoints.min.js"></script>
-    <!-- Counter Up -->
+    <!-- Counter Up | Para el contador de numeros-->
     <script src="js/jquery.counterup.min.js"></script>
+    <!-- Pickadate.js | Para el date y time picker-->
+    <script src="js/pickadate.js/picker.js"></script>
+    <script src="js/pickadate.js/picker.date.js"></script>
+    <script src="js/pickadate.js/picker.time.js"></script>
+    <!-- Stickit js | Para la barra de navegación fija-->
+    <script src="js/jquery.stickit.min.js"></script>
+    <!-- PageScroll2id | Para realizar el efecto de desplazamiento (Scroll) entre las diferentes secciones de la pagina desde el menu principal -->
+    <script src="js/jquery.malihu.PageScroll2id.min.js"></script>
     <!-- Script Propios -->
     <script src="js/scripts.js"></script>
   </body>

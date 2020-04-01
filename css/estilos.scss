@@ -206,6 +206,12 @@ body{
     color: white;
 }
 
+.menuFijo{
+    transition: all .5s ease;
+    background-color: darken($secundario, 20%)!important;
+    width: 100%!important;
+}
+
 /*
     7. ESTILOS PARA #animacion
 */
@@ -385,6 +391,128 @@ body{
 }
 
 /*
+    11. ESTILOS PARA #nuestraApp
+*/
+
+#nuestraApp{
+    position: relative;
+}
+
+#nuestraApp::before{
+    content: '';
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/*
+    12. ESTILOS PARA #contactanos
+*/
+#contactanos header{
+    position: relative;
+}
+
+//Para colocal el triangulo que sobresale en la parte inferior
+#contactanos .detalleRectangulo{
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: $principal;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) translateY(50%) rotate(45deg)
+}
+
+.input-group-campo{
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+//Personalizar datepicker
+.picker__box{
+    border: 5px solid $principal;
+}
+
+.picker--focused 
+.picker__day--highlighted, 
+.picker__day--highlighted:hover, 
+.picker__day--infocus:hover, 
+.picker__day--outfocus:hover {
+    color: #fff;
+    cursor: pointer;
+    background: $principal;
+}
+
+.picker__day--today:before {
+    border-top: .5em solid #ffffff;
+}
+
+.picker__select--month, .picker__select--year {
+    padding: 0 .5rem;
+    border-radius: .5rem;
+}
+
+.picker__button--clear:hover, .picker__button--close:hover, .picker__button--today:hover {
+    cursor: pointer;
+    color: #fff;
+    background: $principal;
+    border-bottom-color: $principal;
+}
+
+.picker__nav--next:hover, .picker__nav--prev:hover {
+    background:$principal;
+}
+
+.picker__nav--next:before:hover, .picker__nav--prev:before:hover {
+    background-color: $principal;
+    border-right: .75em solid red;
+}
+
+
+//Personalizar timepicker
+.picker--focused .picker__list-item--highlighted, .picker__list-item--highlighted:hover, .picker__list-item:hover {
+    background: $principal;
+    cursor: pointer;
+    color: #fff;
+}
+
+.picker__list {
+    padding: .5rem 0;
+}
+
+.picker--time .picker__button--clear {
+   border-radius: .5rem;
+}
+
+
+/*
+    12. ESTILOS PARA #pieDePagina
+*/
+
+#pieDePagina{
+    overflow: hidden;
+}
+
+.columnaInclinada::before{
+    content: '';
+    background-color: $principal;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: -100%;
+}
+
+.borde-bottom{
+    border-bottom: 1px solid #5d666f;
+    //Utilizo una sombra para generar el segundo color del borde
+    box-shadow: 0 1px #212529;
+}
+
+/*
     X. MEDIAS QUERIES
 */
 
@@ -407,6 +535,13 @@ body{
     
     #teAyudamos .container{
         transform: skewY(-3deg);
+    }
+
+    //Reduzco la inclinacion de la columna inclidad del footer
+    .columnaInclinada::before{
+        left: -300%;
+        right: 0;
+        transform: skewX(20deg);
     }
     
 }
