@@ -9,11 +9,7 @@ let enlaces = document.querySelectorAll('#menuPrincipal .nav-item');
 
 //Evento al boton
 boton.addEventListener('click', (e) => {
-    if(e.target.classList.contains('iconoCerrar')){
-        e.target.classList.remove('iconoCerrar')
-    }else{
-        e.target.classList.add('iconoCerrar');
-    }
+    e.target.classList.toggle('iconoCerrar')
 });
 
 //Evento a los enlaces del menu principal
